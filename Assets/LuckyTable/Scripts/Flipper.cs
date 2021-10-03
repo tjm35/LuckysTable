@@ -17,7 +17,7 @@ public class Flipper : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        bool pressed = (m_launchAction.action?.ReadValue<float>() ?? 0.0f) > 0.5f;
+        bool pressed = (m_launchAction?.action?.ReadValue<float>() ?? 0.0f) > 0.5f;
         if (pressed && !m_lastPressed && !string.IsNullOrEmpty(FlipSound))
         {
             FMODUnity.RuntimeManager.PlayOneShot(FlipSound);

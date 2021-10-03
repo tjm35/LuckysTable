@@ -26,7 +26,7 @@ public class Launcher : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if ((m_launchAction.action?.ReadValue<float>() ?? 0.0f) > 0.5f)
+        if ((m_launchAction?.action?.ReadValue<float>() ?? 0.0f) > 0.5f)
         {
             m_pullAmount += Time.fixedDeltaTime / m_maxPullTime;
             m_lastPullState = true;
