@@ -26,6 +26,7 @@ public class Game : MonoBehaviour
     public event Action OnResetDoors;
     public event Action OnResetGame;
     public UnityEvent<int> OnBallsRemainingUpdate;
+    public UnityEvent OnExtraBallAwarded;
 
     public static Game Instance;
 
@@ -87,6 +88,7 @@ public class Game : MonoBehaviour
     {
         Log("Awarded {0} extra balls", i_num);
         BallsRemaining += i_num;
+        OnExtraBallAwarded?.Invoke();
     }
 
     public void SpawnBall(Ball i_ball = null)

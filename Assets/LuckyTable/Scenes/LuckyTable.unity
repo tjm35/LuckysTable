@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.179714, g: 0.22502159, b: 0.30653942, a: 1}
+  m_IndirectSpecularColor: {r: 0.18333426, g: 0.22895451, b: 0.30620295, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -219,6 +219,68 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 41911918}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!95 &48893578 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 6753333070511572796, guid: 49c77b78f2525674e9225de5557dc58a, type: 3}
+  m_PrefabInstance: {fileID: 4228212871627138433}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &100525487
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1508807454}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: b4e270d91f77d3e4bb10c77db01674bf, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b4e270d91f77d3e4bb10c77db01674bf, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b4e270d91f77d3e4bb10c77db01674bf, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b4e270d91f77d3e4bb10c77db01674bf, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.19
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b4e270d91f77d3e4bb10c77db01674bf, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.078894146
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b4e270d91f77d3e4bb10c77db01674bf, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.99688303
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b4e270d91f77d3e4bb10c77db01674bf, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b4e270d91f77d3e4bb10c77db01674bf, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b4e270d91f77d3e4bb10c77db01674bf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -9.05
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b4e270d91f77d3e4bb10c77db01674bf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b4e270d91f77d3e4bb10c77db01674bf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -180
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b4e270d91f77d3e4bb10c77db01674bf, type: 3}
+      propertyPath: m_Name
+      value: Human
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b4e270d91f77d3e4bb10c77db01674bf, type: 3}
 --- !u!1 &121546112
 GameObject:
   m_ObjectHideFlags: 0
@@ -628,13 +690,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 827122049}
-  m_LocalRotation: {x: 0.57450205, y: -0.121892035, z: 0.5805252, w: 0.563986}
+  m_LocalRotation: {x: 0.3264395, y: -0.106793106, z: 0.63628805, w: 0.690775}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1880303525}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 127.856995, y: -120.36, z: -57.013}
+  m_LocalEulerAnglesHint: {x: 144.063, y: -160.679, z: -88.382996}
 --- !u!108 &827122051
 Light:
   m_ObjectHideFlags: 0
@@ -875,6 +937,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1033671223 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b4e270d91f77d3e4bb10c77db01674bf, type: 3}
+  m_PrefabInstance: {fileID: 100525487}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1095204725
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1360,6 +1427,37 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 0
   OverrideMaxDistance: 0
+--- !u!1 &1508807453
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1508807454}
+  m_Layer: 0
+  m_Name: Human
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1508807454
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1508807453}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1033671223}
+  m_Father: {fileID: 1880303525}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1570093431
 GameObject:
   m_ObjectHideFlags: 0
@@ -1463,6 +1561,7 @@ Transform:
   - {fileID: 41911919}
   - {fileID: 1570093432}
   - {fileID: 1710522828}
+  - {fileID: 1508807454}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1918,6 +2017,21 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnExtraBallAwarded:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 48893578}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: ExtraBall
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1001 &3364036666158591322
