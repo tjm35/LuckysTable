@@ -19,12 +19,20 @@ public class ScoreManager : MonoBehaviour
             OnScoreChanged?.Invoke(Score, oldScore);
             OnScoreUpdate?.Invoke(Score);
             OnScoreUpdateDisplay?.Invoke(Score * DisplayMultiplier);
+            if (m_score > HighScore)
+            {
+                HighScore = m_score;
+                OnHighScoreUpdateDisplay?.Invoke(HighScore * DisplayMultiplier);
+            }
         } 
     }
+
+    public int HighScore { get; private set; }
 
     public event Action<int, int> OnScoreChanged;
     public UnityEvent<int> OnScoreUpdate;
     public UnityEvent<int> OnScoreUpdateDisplay;
+    public UnityEvent<int> OnHighScoreUpdateDisplay;
 
     public static ScoreManager Instance;
 

@@ -7,21 +7,28 @@ public class PlayControls : MonoBehaviour
 {
     public InputActionAsset inputAsset;
     public string actionMap;
+    public bool lockCursor = false;
 
     void OnEnable()
     {
         InputActionMap.Enable();
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
-        Screen.fullScreen = true;
+        if (lockCursor)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+            Screen.fullScreen = true;
+        }
     }
 
     void Disable()
     {
         InputActionMap.Disable();
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
-        Screen.fullScreen = false;
+        if (lockCursor)
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            Screen.fullScreen = false;
+        }
     }
 
 	private InputActionMap InputActionMap => inputAsset.FindActionMap(actionMap);

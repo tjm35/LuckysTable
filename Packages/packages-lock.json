@@ -7,6 +7,13 @@
       "dependencies": {},
       "hash": "5c1e4a9f8e3820f4a37033ae833e50ba70784085"
     },
+    "com.unity.cinemachine": {
+      "version": "2.6.10",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
     "com.unity.ext.nunit": {
       "version": "1.0.6",
       "depth": 2,
