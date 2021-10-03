@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Game : MonoBehaviour
 {
@@ -10,7 +11,11 @@ public class Game : MonoBehaviour
     public int m_initialBallCount = 3;
     public GameObject m_ballProto;
 
-    public int BallsRemaining { get; set; }
+    public int BallsRemaining 
+    { 
+        get { return m_ballsRemaining; } 
+        private set { m_ballsRemaining = value; OnBallsRemainingUpdate?.Invoke(m_ballsRemaining); }
+    }
     public int BallsInPlay { get; set; }
 
     public bool LogGameState = false;
@@ -18,6 +23,7 @@ public class Game : MonoBehaviour
     public event Action OnResetSafeties;
     public event Action OnResetDoors;
     public event Action OnResetGame;
+    public UnityEvent<int> OnBallsRemainingUpdate;
 
     public static Game Instance;
 
@@ -106,4 +112,6 @@ public class Game : MonoBehaviour
             Debug.Log("Game: " + text);
         }
     }
+
+    private int m_ballsRemaining;
 }
