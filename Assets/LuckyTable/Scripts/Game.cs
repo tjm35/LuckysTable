@@ -42,6 +42,7 @@ public class Game : MonoBehaviour
 
     void Update()
     {
+        OnBallsRemainingUpdate?.Invoke(BallsRemaining);
         if (m_gameOverTimer > 0.0f)
         {
             m_gameOverTimer -= Time.deltaTime;
