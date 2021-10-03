@@ -13,6 +13,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_force: 0
+--- !u!114 &3430851434809977706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6557254683230425944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2040159e699b864cabe693d33d9bfb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HitSound: event:/EnqueueMusic
 --- !u!1 &7832468947495166882
 GameObject:
   m_ObjectHideFlags: 0
