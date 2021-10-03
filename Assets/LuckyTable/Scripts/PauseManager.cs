@@ -42,7 +42,15 @@ public class PauseManager : MonoBehaviour
     {
         if (!Paused && ForceFullscreen && Screen.fullScreen == false && !Application.isEditor)
         {
-            Pause();
+            m_fullscreenLostPauseCountdown--;
+            if (m_fullscreenLostPauseCountdown <= 0)
+            {
+                Pause();
+            }
+        }
+        else
+        {
+            m_fullscreenLostPauseCountdown = 3;
         }
     }
 
@@ -89,4 +97,5 @@ public class PauseManager : MonoBehaviour
     }
 
     private bool ForceFullscreen = BuildConstants.platform == BuildConstants.Platform.WebGL;
+    private int m_fullscreenLostPauseCountdown = 3;
 }
