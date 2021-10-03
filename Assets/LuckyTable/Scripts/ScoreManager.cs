@@ -2,14 +2,29 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ScoreManager : MonoBehaviour
 {
+    public int DisplayMultiplier = 100;
     public bool LogScore = false;
 
-    public int Score { get; private set; }
+    public int Score 
+    { 
+        get { return m_score; }
+        private set
+        {
+            int oldScore = m_score;
+            m_score = value;
+            OnScoreChanged?.Invoke(Score, oldScore);
+            OnScoreUpdate?.Invoke(Score);
+            OnScoreUpdateDisplay?.Invoke(Score * DisplayMultiplier);
+        } 
+    }
 
     public event Action<int, int> OnScoreChanged;
+    public UnityEvent<int> OnScoreUpdate;
+    public UnityEvent<int> OnScoreUpdateDisplay;
 
     public static ScoreManager Instance;
 
@@ -38,11 +53,12 @@ public class ScoreManager : MonoBehaviour
         {
             Debug.Log($"Awarded {i_amount} points, new score {Score}");
         }
-        OnScoreChanged?.Invoke(Score, oldScore);
     }
 
     public void ResetScore()
     {
         Score = 0;
     }
+
+    private int m_score;
 }
