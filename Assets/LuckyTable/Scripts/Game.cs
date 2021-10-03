@@ -10,6 +10,8 @@ public class Game : MonoBehaviour
 
     public int m_initialBallCount = 3;
     public GameObject m_ballProto;
+    public GameObject m_gameOverEffect;
+    public float m_gameOverDuration = 3.0f;
 
     public int BallsRemaining 
     { 
@@ -38,6 +40,20 @@ public class Game : MonoBehaviour
         ResetGame();
     }
 
+    void Update()
+    {
+        if (m_gameOverTimer > 0.0f)
+        {
+            m_gameOverTimer -= Time.deltaTime;
+            if (m_gameOverTimer <= 0.0f)
+            {
+                m_gameOverTimer = -1.0f;
+                m_gameOverEffect?.SetActive(false);
+                ResetGame();
+            }
+        }
+    }
+
     void OnDestroy()
     {
         Debug.Assert(Instance == this);
@@ -62,6 +78,8 @@ public class Game : MonoBehaviour
     public void GameOver()
     {
         Log("Game Over");
+        m_gameOverEffect?.SetActive(true);
+        m_gameOverTimer = m_gameOverDuration;
     }
 
     public void ExtraBall(int i_num = 1)
@@ -114,4 +132,5 @@ public class Game : MonoBehaviour
     }
 
     private int m_ballsRemaining;
+    private float m_gameOverTimer = -1;
 }
