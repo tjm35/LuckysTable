@@ -27,7 +27,10 @@ public class ValueVisibility : MonoBehaviour
 
     void UpdateImage()
     {
-        m_image.enabled = (Value >= MinValue);
+        if (m_image != null)
+        {
+            m_image.enabled = (Value >= MinValue);
+        }
     }
 
     private Image m_image;

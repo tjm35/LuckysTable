@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _basicSettings:
     baseBuildFolder: Builds
-    buildPath: $PLATFORM
+    buildPath: $PLATFORM/$RELEASE_TYPE
     openFolderPostBuild: 1
   _productParameters:
-    buildCounter: 0
-    buildVersion: 
+    buildCounter: 2
+    buildVersion: 1.0.0.2
     versionTemplate: 1.0.0.$BUILD
     autoGenerate: 1
     syncWithPlayerSettings: 0
@@ -33,17 +33,26 @@ MonoBehaviour:
       sceneList:
         enabledScenes:
         - fileGUID: d9c252d34bf59544880d18c45cb5cec3
+    - typeName: Development
+      bundleIdentifier: com.Totality.LuckyTable
+      companyName: Totality
+      productName: LuckyTable
+      buildOptions: 1
+      customDefines: 
+      sceneList:
+        enabledScenes:
+        - fileGUID: d9c252d34bf59544880d18c45cb5cec3
   _platformList:
     platforms:
     - {fileID: 5956223820702955780}
     - {fileID: 6055556377184360043}
   _projectConfigurations:
     configSet:
-      _Buckets: 03000000ffffffff04000000ffffffffffffffff01000000ffffffff
-      _HashCodes: 4bbe5b54510e9f596d38f6476da5e2352d6dfd480000000000000000
-      _Next: ffffffffffffffffffffffff02000000000000000000000000000000
-      _Count: 5
-      _Version: 5
+      _Buckets: ffffffffffffffffffffffff06000000ffffffffffffffff0200000007000000ffffffff03000000ffffffffffffffffffffffffffffffff080000000900000005000000
+      _HashCodes: 4bbe5b54510e9f596d38f6476da5e2352d6dfd48c53df85883c47952a728bd13b7d47a29a767614900000000000000000000000000000000000000000000000000000000
+      _Next: ffffffffffffffffffffffffffffffff01000000ffffffff04000000ffffffffffffffff0000000000000000000000000000000000000000000000000000000000000000
+      _Count: 10
+      _Version: 10
       _FreeList: -1
       _FreeCount: 0
       _Keys:
@@ -52,6 +61,16 @@ MonoBehaviour:
       - Release/WebGL/WebGL
       - Release/WebGL
       - Release
+      - Development/PC/Windows x64
+      - Development/PC
+      - Development/WebGL/WebGL
+      - Development/WebGL
+      - Development
+      - 
+      - 
+      - 
+      - 
+      - 
       - 
       - 
       _Values:
@@ -72,13 +91,37 @@ MonoBehaviour:
       - enabled: 1
         childKeys: []
       - enabled: 1
+        childKeys:
+        - Development/PC/Windows x64
+      - enabled: 1
+        childKeys: []
+      - enabled: 1
+        childKeys:
+        - Development/WebGL/WebGL
+      - enabled: 1
+        childKeys:
+        - Development/PC
+        - Development/WebGL
+      - enabled: 1
+        childKeys: []
+      - enabled: 1
+        childKeys: []
+      - enabled: 1
+        childKeys: []
+      - enabled: 1
+        childKeys: []
+      - enabled: 1
+        childKeys: []
+      - enabled: 1
+        childKeys: []
+      - enabled: 1
         childKeys: []
     showViewOptions: 0
     showConfigs: 0
     showBuildInfo: 0
     hideDisabled: 0
     treeView: 1
-    selectedKeyChain: Release/WebGL/WebGL
+    selectedKeyChain: Development/WebGL/WebGL
   _preBuildActions:
     buildActions: []
   _postBuildActions:

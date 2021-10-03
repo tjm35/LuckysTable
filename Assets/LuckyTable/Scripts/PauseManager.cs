@@ -40,7 +40,7 @@ public class PauseManager : MonoBehaviour
 
     void Update()
     {
-        if (!Paused && Screen.fullScreen == false && !Application.isEditor)
+        if (!Paused && ForceFullscreen && Screen.fullScreen == false && !Application.isEditor)
         {
             Pause();
         }
@@ -70,6 +70,10 @@ public class PauseManager : MonoBehaviour
         Time.timeScale = 0.0f;
         Paused = true;
         OnPause?.Invoke();
+        if (ForceFullscreen)
+        {
+            Screen.fullScreen = false;
+        }
     }
 
     private void Unpause()
@@ -78,5 +82,11 @@ public class PauseManager : MonoBehaviour
         Time.timeScale = 1.0f;
         Paused = false;
         OnUnpause?.Invoke();
+        if (ForceFullscreen)
+        {
+            Screen.fullScreen = true;
+        }
     }
+
+    private bool ForceFullscreen = BuildConstants.platform == BuildConstants.Platform.WebGL;
 }

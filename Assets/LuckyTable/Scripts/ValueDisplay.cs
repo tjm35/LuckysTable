@@ -28,7 +28,10 @@ public class ValueDisplay : MonoBehaviour
 
     void UpdateText()
     {
-        m_text.text = string.Format(FormatString, Value);
+        if (m_text != null)
+        {
+            m_text.text = string.Format(FormatString, Value);
+        }
     }
 
     private TMP_Text m_text;

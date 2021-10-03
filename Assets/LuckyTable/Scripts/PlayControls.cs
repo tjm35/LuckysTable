@@ -16,7 +16,6 @@ public class PlayControls : MonoBehaviour
         {
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
-            Screen.fullScreen = true;
         }
     }
 
@@ -27,7 +26,6 @@ public class PlayControls : MonoBehaviour
         {
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
-            Screen.fullScreen = false;
         }
     }
 
