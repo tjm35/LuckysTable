@@ -111,6 +111,7 @@ MonoBehaviour:
   m_force: 72000
   m_invert: 0
   m_launchAction: {fileID: 720170615911897630, guid: 7b4df2366901c8c46840f0b81eae82de, type: 3}
+  FlipSound: event:/Flipper
 --- !u!59 &3192937337502228235
 HingeJoint:
   m_ObjectHideFlags: 0
